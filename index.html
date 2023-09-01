@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Cotton Collection Taytay</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<body class="bg-yellow-50">
+    <nav class="p-10 h-10 bg-white shadow-2xl bg-cover md:flex md:items-center sticky top-0 bottom-0">
+        <div class="flex">
+            <span class="text-2xl font-[Poppins]">
+                <img class="h-20 inline" src="images/cottonz.png">
+                
+                </span>
+    
+                <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                    <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+                </span>
+            </div>
+    
+            <ul class="md:flex items-center md:justify-between z-[-1] md:z-auto md:static absolute bg-white md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-0 transition-all ease-in duration-500">
+                
+                <li class="mx-4 my-6 md:0"><a href="#" class="text-xl hover: text-pink-900 duration-500">HOME</a></li>
+                <li class="mx-4 my-6 md:0"><a href="#" class="text-xl hover: text-pink-900 duration-500">SERVICES</a></li>
+                <li class="mx-4 my-6 md:0"><a href="#" class="text-xl hover: text-pink-900 duration-500">ABOUT US</a></li>
+                <button class="bg-text-white font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-red-400 rounded"> SEND US A MESSAGE </button>
+            </ul>
+        </nav>
+
+    <div class="centered-box">
+        <div class="box">
+            <div style="--v: 1;"><img src="images/b1.jpg"></div>
+            <div style="--v: 2;"><img src="images/b2.jpg"></div>
+            <div style="--v: 3;"><img src="images/b3.jpg"></div>
+            <div style="--v: 4;"><img src="images/b4.jpg"></div>
+            <div style="--v: 5;"><img src="images/b5.jpg"></div>
+            <div style="--v: 6;"><img src="images/b6.jpg"></div>
+            <div style="--v: 7;"><img src="images/b7.jpg"></div>
+            <div style="--v: 8;"><img src="images/b8.jpg"></div>
+        </div>
+    </div>
+
+    <style>
+        * {
+            margin: 20px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+    .centered-box {
+        flex: 1;
+        display: flex;
+        padding: 100px;
+        flex-direction: column-reverse; /* Place sections and footer at the bottom */
+        align-items: center; /* Center horizontally */
+    }
+
+        .box {
+    position: relative;
+    height: 400px;
+    width: 200px;
+    transform-style: preserve-3d;
+    animation: animate 18s linear infinite;
+}
+@keyframes animate {
+   
+    0%{
+        transform: perspective(1500px) rotateY(200deg);
+    }
+   
+    100%{
+        transform: perspective(1500px) rotateY(360deg);
+    }
+}
+.box div {
+    position: absolute;
+    top: 0; left: 0;
+    height: 50%;
+    width: 90%;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: rotateY(calc(var(--v)  * 45deg)) translateZ(300px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,rgb(21, 21, 157));
+}
+
+.box div img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.spin {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        filter: hue-rotate(0deg);
+        transform: perspective(1500px) rotateY(0deg);
+        -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#004);
+    }
+    100%{
+        filter: hue-rotate(-360deg);
+        transform: perspective(1500px) rotateY(360deg);
+        -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#004);
+    }
+ }
+
+        /* Rest of your spinning animation styles here */
+
+        /* Your navigation menu styles here */
+    </style>
+
+    <script>
+        
+        
+        $(document).ready(function(){
+            $('.box div').click(function(){
+                if($(this).hasClass('spin')){
+                    $('.box div').removeClass('spin');}
+            else{
+                $('.box div').removeClass('spin');
+                $(this).addClass('spin');
+               }
+            });
+
+window.addEventListener('scroll', function() {
+const nav = document.querySelector('.p-10');
+const scrollPos = window.scrollY; // Add this line to get the scroll position
+
+if (scrollPos > 50) {
+nav.classList.add('sticky');
+} else {
+nav.classList.remove('sticky');
+}
+});
+});
+
+
+    </script>
+    <section id="services" class="services">
+        <div class="container">
+            <div class="services">
+                <img src="services-icon-1.png" alt="services 1">
+                
+                <p>Offer the option for parents to add a personal touch to your baby clothing by providing custom monogramming or personalization services. This allows customers to embroider their baby's name, initials, or special message onto the clothing items, creating a unique keepsake and a thoughtful gift. This feature not only sets your brand apart but also adds an extra layer of sentimental value to your products..</p>
+            </div>
+            <div class="services">
+                <img src="services-icon-2.png" alt="services 2">
+                
+                <p>Description of feature 2.</p>
+            </div>
+            <div class="services">
+                <img src="feature-icon-3.png" alt="services 3">
+                
+                <p>Description of services 3.</p>
+
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Cotton Collection Taytay, our mission is to dress every baby in comfort, style, and care. We are committed to creating high-quality,<br>
+                adorable, and safe clothing for infants and toddlers. Through our thoughtful designs and premium materials, we aim to bring joy to both parents and
+                 their little ones, making every moment a special one.</p>
+                </div>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to learn more? Get in touch with us!</p>
+            <form class="contact-form" action="submit_form.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full">Send Message</button>
+            </form>
+
+    <footer class="footer">
+    <div class="container">
+
+            <style>
+                /* ... Your existing styles ... */
+            
+                /* Style for the sections */
+                .services,
+                .about,
+                .contact,
+                .footer
+                {
+                    height: 50px;
+                    padding: 100px 0;
+                    max-width: 2000px;
+                    text-shadow: rgb(233, 233, 238);
+                    
+                }
+            
+                /* Additional styling for section headings and content */
+                .container {
+                    max-width: 2000px;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+            
+                .container h2 {
+                    font-size: 28px;
+                    margin-bottom: 30px;
+                }
+            
+                .container p {
+                    font-size: 20;
+                    line-height: 1.5;
+                }
+            </style>
+            <p>&copy; 2023 Your Startup. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

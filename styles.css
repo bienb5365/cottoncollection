@@ -1,0 +1,21 @@
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: top 0.3s ease-in-out;
+}
+
+
+
+/* Add this style to make the logo and text centered */
+.text-2xl.font-[Poppins] {
+    display: flex;
+    align-items: center;
+}
+
+/* Add styles to make the ion-icon centered */
+.text-3xl.cursor-pointer.mx-2.md:hidden.block {
+    display: flex;
+    align-items: center;
+}
